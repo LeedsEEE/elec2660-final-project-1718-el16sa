@@ -1,5 +1,5 @@
 //
-//  ViewController.m
+//  MViewController.m
 //  Word Games
 //
 //  Created by Salah El Abd on 11/23/17.
@@ -386,25 +386,15 @@
 }
 
 
-    
-
- -(void)nextLevel{
-    if (_F1.hidden == false) {
-        self.NextLevelButton.hidden = false;
-        
-    }
- 
-}
-
 
 
 - (IBAction)NextLevelButtonn:(UIButton *)sender {
     if (sender.selected ){
         
-        [self endgame];
+        [self NextLevel];
     }
 }
--(void)endgame{
+-(void)NextLevel{
     MSecondViewController *MViewController;
     MViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MSecondViewController"];
     [self presentViewController:MViewController animated:YES completion:nil];

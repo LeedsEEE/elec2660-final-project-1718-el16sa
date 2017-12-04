@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MViewController.h
 //  Word Games
 //
 //  Created by Salah El Abd on 11/23/17.
