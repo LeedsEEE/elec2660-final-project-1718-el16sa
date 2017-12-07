@@ -54,6 +54,7 @@
 		E526D76E1FD5C6290042467F /* t_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = E526D75D1FD5C6280042467F /* t_empty.png */; };
 		E526D76F1FD5C6290042467F /* q_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = E526D75E1FD5C6280042467F /* q_empty.png */; };
 		E526D7701FD5C6290042467F /* m_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = E526D75F1FD5C6280042467F /* m_empty.png */; };
+		E526D7721FD9BD420042467F /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = E526D7711FD9BD420042467F /* Icons */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +137,7 @@
 		E526D75D1FD5C6280042467F /* t_empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = t_empty.png; path = "Word Games/t_empty.png"; sourceTree = "<group>"; };
 		E526D75E1FD5C6280042467F /* q_empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = q_empty.png; path = "Word Games/q_empty.png"; sourceTree = "<group>"; };
 		E526D75F1FD5C6280042467F /* m_empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = m_empty.png; path = "Word Games/m_empty.png"; sourceTree = "<group>"; };
+		E526D7711FD9BD420042467F /* Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Icons; path = "Word Games/Icons"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 				E526D6FC1FC780960042467F /* Word GamesTests */,
 				E526D7071FC780960042467F /* Word GamesUITests */,
 				E526D6E11FC780950042467F /* Products */,
+				E526D7711FD9BD420042467F /* Icons */,
 				E526D7161FC781AA0042467F /* Screen Shot 2017-11-20 at 10.14.00 PM.png */,
 				E526D71C1FC788440042467F /* o_red.png */,
 				E526D71D1FC788440042467F /* o_empty.png */,
@@ -220,23 +223,23 @@
 			children = (
 				E526D6E71FC780950042467F /* AppDelegate.m */,
 				E526D6E61FC780950042467F /* AppDelegate.h */,
-				E526D6E91FC780950042467F /* MViewController.h */,
-				E526D6EA1FC780950042467F /* MViewController.m */,
+				E526D73D1FD212B20042467F /* MenuViewController.h */,
+				E526D73E1FD212B20042467F /* MenuViewController.m */,
+				E526D7401FD325190042467F /* DifficultyViewController.h */,
+				E526D7411FD325190042467F /* DifficultyViewController.m */,
 				E526D7431FD3472E0042467F /* EViewController.h */,
 				E526D7441FD3472E0042467F /* EViewController.m */,
 				E526D7461FD347430042467F /* ESecondViewController.h */,
 				E526D7471FD347440042467F /* ESecondViewController.m */,
+				E526D6E91FC780950042467F /* MViewController.h */,
+				E526D6EA1FC780950042467F /* MViewController.m */,
+				E526D7381FCF3F820042467F /* MSecondViewController.h */,
+				E526D7391FCF3F820042467F /* MSecondViewController.m */,
 				E526D7491FD347520042467F /* IViewController.h */,
 				E526D74A1FD347520042467F /* IViewController.m */,
 				E526D74C1FD3475F0042467F /* ISecondViewController.h */,
 				E526D74D1FD3475F0042467F /* ISecondViewController.m */,
 				E526D6EC1FC780950042467F /* Main.storyboard */,
-				E526D7401FD325190042467F /* DifficultyViewController.h */,
-				E526D7411FD325190042467F /* DifficultyViewController.m */,
-				E526D73D1FD212B20042467F /* MenuViewController.h */,
-				E526D73E1FD212B20042467F /* MenuViewController.m */,
-				E526D7381FCF3F820042467F /* MSecondViewController.h */,
-				E526D7391FCF3F820042467F /* MSecondViewController.m */,
 				E526D6EF1FC780950042467F /* Assets.xcassets */,
 				E526D6F11FC780960042467F /* LaunchScreen.storyboard */,
 				E526D6F41FC780960042467F /* Info.plist */,
@@ -387,6 +390,7 @@
 				E526D6F31FC780960042467F /* LaunchScreen.storyboard in Resources */,
 				E526D76C1FD5C6290042467F /* s_empty.png in Resources */,
 				E526D7631FD5C6280042467F /* s_red.png in Resources */,
+				E526D7721FD9BD420042467F /* Icons in Resources */,
 				E526D6F01FC780950042467F /* Assets.xcassets in Resources */,
 				E526D7701FD5C6290042467F /* m_empty.png in Resources */,
 				E526D72C1FC788440042467F /* d_red.png in Resources */,

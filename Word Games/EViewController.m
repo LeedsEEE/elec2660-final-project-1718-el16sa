@@ -34,7 +34,7 @@
     self.W2.hidden = true;
     self.A4.hidden = true;
     self.NextLevelButton.hidden = true;
-    
+    // Originally the images with letters are hidden. They appear when the user chooses the word correctly from the options of inputs given. The button to proceed to the next level is also hidden at first since the user has to input a word correctly first.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,17 +52,17 @@
 }
 */
 
-- (IBAction)inputtQ:(UIButton *)sender {
-    if ([sender isSelected]) {
-        NSLog(@"Selected");
+- (IBAction)inputtQ:(UIButton *)sender { // The action that i declared in the header file is imported into the main file to be able to use it.
+    if ([sender isSelected]) { // An if statement is used to place a condition if the button is selected.
+        NSLog(@"Unselected"); // The NSLOG function does not affect the functionality. It displays the value "selected" in the built in log in xcode so observe whether it actually works.
         [sender setImage:[UIImage imageNamed:@"q_empty.png"] forState:UIControlStateNormal];
-        sender.selected = NO;
+        sender.selected = NO;// if user did not select button, send to NSLog "Unselected" and keep selected image.
     }
-    else { //no
-        NSLog(@"Unselected");
+    else { //no // if user did select button change image to the other selected image.
+        NSLog(@"Selected");
         [sender setImage: [UIImage imageNamed:@"q_red.png"]  forState: UIControlStateNormal];
         sender.selected = YES;
-}
+} //Reference AVAudioPlayer Lab: https://minerva.leeds.ac.uk/bbcswebdav/pid-5341615-dt-content-rid-9710025_2/courses/201718_27046_ELEC2660/podcasts/Lab%206.mp4
     [self checkForSequence];
     [self checkForSequence2];
     [self checkForSequence3];
@@ -75,12 +75,12 @@
 }
 - (IBAction)inputtW:(UIButton *)sender {
     if ([sender isSelected]) {
-        NSLog(@"Selected");
+        NSLog(@"unselected");
         [sender setImage:[UIImage imageNamed:@"w_empty.png"] forState:UIControlStateNormal];
         sender.selected = NO;
     }
     else { //no
-        NSLog(@"Unselected");
+        NSLog(@"selected");
         [sender setImage: [UIImage imageNamed:@"w_red.png"]  forState: UIControlStateNormal];
         sender.selected = YES;
 }
@@ -96,12 +96,12 @@
 }
 - (IBAction)inputtE:(UIButton *)sender {
     if ([sender isSelected]) {
-        NSLog(@"Selected");
+        NSLog(@"unselected");
         [sender setImage:[UIImage imageNamed:@"e_empty.png"] forState:UIControlStateNormal];
         sender.selected = NO;
     }
     else { //no
-        NSLog(@"Unselected");
+        NSLog(@"selected");
         [sender setImage: [UIImage imageNamed:@"e_red.png"]  forState: UIControlStateNormal];
         sender.selected = YES;
 }
