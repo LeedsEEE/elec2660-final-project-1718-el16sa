@@ -50,6 +50,22 @@
 @property (weak, nonatomic) IBOutlet UIImageView *Tn;
 
 
+
+@property (weak, nonatomic) IBOutlet UIButton *inputFWrong;
+@property (weak, nonatomic) IBOutlet UIButton *inputMWrong;
+@property (weak, nonatomic) IBOutlet UIButton *inputWWrong;
+@property (weak, nonatomic) IBOutlet UIButton *inputDWrong;
+- (IBAction)inputtFWrong:(UIButton *)sender;
+- (IBAction)inputtMWrong:(UIButton *)sender;
+- (IBAction)inputtWWrong:(UIButton *)sender;
+- (IBAction)inputtDWrong:(UIButton *)sender;
+
+@property (weak, nonatomic) IBOutlet UILabel *LivesLabel5;
+@property NSString* Livess5;
+
+
+
+
 @property (weak, nonatomic) IBOutlet UIButton *inputE;
 @property (weak, nonatomic) IBOutlet UIButton *inputA;
 @property (weak, nonatomic) IBOutlet UIButton *inputL;

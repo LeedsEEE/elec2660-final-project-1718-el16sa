@@ -53,7 +53,29 @@
 - (IBAction)inputtT:(UIButton *)sender;
 
 
+@property (weak, nonatomic) IBOutlet UIButton *inputFWrong;
+@property (weak, nonatomic) IBOutlet UIButton *inputWWrong;
+@property (weak, nonatomic) IBOutlet UIButton *inputAWrong;
+@property (weak, nonatomic) IBOutlet UIButton *inputDWrong;
+- (IBAction)inputtFWrong:(UIButton *)sender;
+- (IBAction)inputtWWrong:(UIButton *)sender;
+- (IBAction)inputtAWrong:(UIButton *)sender;
+- (IBAction)inputtDWrong:(UIButton *)sender;
+
+
+
+
+
+
+
 
 
 
 @end
+
+
+
+
+
+
+

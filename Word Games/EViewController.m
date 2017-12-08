@@ -14,8 +14,6 @@
 
 @end
 int lives;
-
-
 AVAudioPlayer *correct;
 
 @implementation EViewController
@@ -38,7 +36,7 @@ AVAudioPlayer *correct;
     self.E3.hidden = true;
     self.W2.hidden = true;
     self.A4.hidden = true;
-    self.NextLevelButton.hidden = true;
+    self.NextLevelButton.hidden = false;
     // Originally the images with letters are hidden. They appear when the user chooses the word correctly from the options of inputs given. The button to proceed to the next level is also hidden at first since the user has to input a word correctly first.
     NSURL *CorrectSound = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/correct.wav",[[NSBundle mainBundle] resourcePath]]];
     correct = [[AVAudioPlayer alloc] initWithContentsOfURL:CorrectSound error:nil];
@@ -208,8 +206,7 @@ AVAudioPlayer *correct;
         self.R2.hidden = false;
         self.R4.hidden = false;
         [correct play];
-        [_inputR setImage:[UIImage imageNamed:@"r.png"] forState:UIControlStateNormal];
-        [_inputR setSelected:NO];
+      
         
     
     }
@@ -222,8 +219,7 @@ AVAudioPlayer *correct;
         self.A3.hidden = false;
         self.A4.hidden = false;
          [correct play];
-        [_inputA setImage:[UIImage imageNamed:@"a.png"] forState:UIControlStateNormal];
-        [_inputA setSelected:NO];
+      
       
         
     }
@@ -237,8 +233,7 @@ AVAudioPlayer *correct;
         self.W1.hidden = false;
     
         [correct play];
-        [_inputW setImage:[UIImage imageNamed:@"w.png"] forState:UIControlStateNormal];
-        [_inputW setSelected:NO];
+      
     }
 }
 -(void)checkForSequence4{
@@ -248,8 +243,7 @@ AVAudioPlayer *correct;
         self.T2.hidden = false;
         self.T1.hidden = false;
         [correct play];
-        [_inputT setImage:[UIImage imageNamed:@"t.png"] forState:UIControlStateNormal];
-        [_inputT setSelected:NO];
+        
       
     }
 }
@@ -260,8 +254,7 @@ AVAudioPlayer *correct;
         self.E2.hidden = false;
         self.E3.hidden = false;
         [correct play];
-        [_inputE setImage:[UIImage imageNamed:@"e.png"] forState:UIControlStateNormal];
-        [_inputE setSelected:NO];
+       
         
     
     }
@@ -344,7 +337,7 @@ AVAudioPlayer *correct;
         _Livess = [NSString stringWithFormat:@"Lives: %i",lives];
         _livesLabel.text = _Livess;
         
-        [_inputOWrong setImage:[UIImage imageNamed:@"s.png"] forState:UIControlStateNormal];
+        [_inputOWrong setImage:[UIImage imageNamed:@"o.png"] forState:UIControlStateNormal];
         [_inputOWrong setSelected:NO];
         
     }
@@ -356,7 +349,7 @@ AVAudioPlayer *correct;
         _Livess = [NSString stringWithFormat:@"Lives: %i",lives];
         _livesLabel.text = _Livess;
         
-        [_inputDWrong setImage:[UIImage imageNamed:@"s.png"] forState:UIControlStateNormal];
+        [_inputDWrong setImage:[UIImage imageNamed:@"d.png"] forState:UIControlStateNormal];
         [_inputDWrong setSelected:NO];
         
     }

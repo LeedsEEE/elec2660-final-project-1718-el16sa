@@ -38,8 +38,18 @@
 @property (weak, nonatomic) IBOutlet UIImageView *R1;
 @property (weak, nonatomic) IBOutlet UIImageView *E1;
 @property (weak, nonatomic) IBOutlet UIImageView *E2;
-@property (weak, nonatomic) IBOutlet UILabel *livesLabel;
-@property NSString* Livess;
+@property (weak, nonatomic) IBOutlet UILabel *livesLabel2;
+@property NSString* Livess2;
+@property (weak, nonatomic) IBOutlet UIButton *inputSWrong;
+@property (weak, nonatomic) IBOutlet UIButton *inputAWrong;
+@property (weak, nonatomic) IBOutlet UIButton *inputQWrong;
+@property (weak, nonatomic) IBOutlet UIButton *inputIWrong;
+- (IBAction)inputtSWrong:(UIButton *)sender;
+- (IBAction)inputtAWrong:(UIButton *)sender;
+- (IBAction)inputtQWrong:(UIButton *)sender;
+- (IBAction)inputtIWrong:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIButton *BackButton;
+
 
 
 

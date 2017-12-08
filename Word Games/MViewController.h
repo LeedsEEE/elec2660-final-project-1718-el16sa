@@ -51,6 +51,21 @@
 - (IBAction)inputt6:(UIButton *)sender;
 - (IBAction)NextLevelButtonn:(UIButton *)sender;
 
+@property (weak, nonatomic) IBOutlet UIButton *inputTWrong;
+@property (weak, nonatomic) IBOutlet UIButton *inputQWrong;
+@property (weak, nonatomic) IBOutlet UIButton *inputIWrong;
+@property (weak, nonatomic) IBOutlet UIButton *inputMWrong;
+- (IBAction)inputtTWrong:(UIButton *)sender;
+- (IBAction)inputtQWrong:(UIButton *)sender;
+- (IBAction)inputtIWrong:(UIButton *)sender;
+- (IBAction)inputtMWrong:(UIButton *)sender;
+@property NSString* Livess3;
+@property (weak, nonatomic) IBOutlet UILabel *LivesLabel3;
+
+
+
+
+
 
 @property (weak, nonatomic) IBOutlet UIImageView *F1;
 @property (weak, nonatomic) IBOutlet UIImageView *O1;
