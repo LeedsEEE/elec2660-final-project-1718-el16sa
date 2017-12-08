@@ -62,7 +62,8 @@
 - (IBAction)inputtAWrong:(UIButton *)sender;
 - (IBAction)inputtDWrong:(UIButton *)sender;
 
-
+@property (weak, nonatomic) IBOutlet UILabel *LivesLabel6;
+@property NSString* Livess6;
 
 
 

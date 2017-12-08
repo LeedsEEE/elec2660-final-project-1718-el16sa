@@ -39,8 +39,8 @@ AVAudioPlayer *correct1;
     self.BackButton.hidden = false;
     NSURL *CorrectSound = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/correct.wav",[[NSBundle mainBundle] resourcePath]]];
     correct1 = [[AVAudioPlayer alloc] initWithContentsOfURL:CorrectSound error:nil];
-    lives2 = 5;
-    _Livess2 = [NSString stringWithFormat:@"Lives: 5"];
+    lives2 = 4;
+    _Livess2 = [NSString stringWithFormat:@"Lives: 4"];
     _livesLabel2.text = _Livess2;
 }
 
@@ -298,6 +298,9 @@ AVAudioPlayer *correct1;
     if (_inputAWrong.selected) {
         NSLog(@"pressed");
         [correct1 play];
+        lives2 = lives2-1;
+        _Livess2 = [NSString stringWithFormat:@"Lives: %i",lives2];
+        _livesLabel2.text = _Livess2;
         [_inputAWrong setImage:[UIImage imageNamed:@"a.png"] forState:UIControlStateNormal];
         [_inputAWrong setSelected:NO];
        

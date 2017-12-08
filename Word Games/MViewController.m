@@ -44,8 +44,8 @@ AVAudioPlayer *correct2;
     self.NextLevelButton.hidden = false;
     NSURL *CorrectSound = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/correct.wav",[[NSBundle mainBundle] resourcePath]]];
     correct2 = [[AVAudioPlayer alloc] initWithContentsOfURL:CorrectSound error:nil];
-    lives3 = 4;
-    _Livess3 = [NSString stringWithFormat:@"Lives: 5"];
+    lives3 = 3;
+    _Livess3 = [NSString stringWithFormat:@"Lives: 3"];
     _LivesLabel3.text = _Livess3;
 }
 

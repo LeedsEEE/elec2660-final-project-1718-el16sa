@@ -32,7 +32,6 @@
 		E526D7371FC788440042467F /* box_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = E526D7291FC788440042467F /* box_empty.png */; };
 		E526D73A1FCF3F820042467F /* MSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E526D7391FCF3F820042467F /* MSecondViewController.m */; };
 		E526D73F1FD212B20042467F /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E526D73E1FD212B20042467F /* MenuViewController.m */; };
-		E526D7421FD325190042467F /* DifficultyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E526D7411FD325190042467F /* DifficultyViewController.m */; };
 		E526D7451FD3472E0042467F /* EViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E526D7441FD3472E0042467F /* EViewController.m */; };
 		E526D7481FD347440042467F /* ESecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E526D7471FD347440042467F /* ESecondViewController.m */; };
 		E526D74B1FD347520042467F /* IViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E526D74A1FD347520042467F /* IViewController.m */; };
@@ -150,8 +149,6 @@
 		E526D7391FCF3F820042467F /* MSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSecondViewController.m; sourceTree = "<group>"; };
 		E526D73D1FD212B20042467F /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		E526D73E1FD212B20042467F /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
-		E526D7401FD325190042467F /* DifficultyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DifficultyViewController.h; sourceTree = "<group>"; };
-		E526D7411FD325190042467F /* DifficultyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DifficultyViewController.m; sourceTree = "<group>"; };
 		E526D7431FD3472E0042467F /* EViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EViewController.h; sourceTree = "<group>"; };
 		E526D7441FD3472E0042467F /* EViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EViewController.m; sourceTree = "<group>"; };
 		E526D7461FD347430042467F /* ESecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESecondViewController.h; sourceTree = "<group>"; };
@@ -337,8 +334,6 @@
 				E526D6E61FC780950042467F /* AppDelegate.h */,
 				E526D73D1FD212B20042467F /* MenuViewController.h */,
 				E526D73E1FD212B20042467F /* MenuViewController.m */,
-				E526D7401FD325190042467F /* DifficultyViewController.h */,
-				E526D7411FD325190042467F /* DifficultyViewController.m */,
 				E526D7431FD3472E0042467F /* EViewController.h */,
 				E526D7441FD3472E0042467F /* EViewController.m */,
 				E526D7461FD347430042467F /* ESecondViewController.h */,
@@ -618,7 +613,6 @@
 				E526D6E51FC780950042467F /* main.m in Sources */,
 				E526D7451FD3472E0042467F /* EViewController.m in Sources */,
 				E526D73F1FD212B20042467F /* MenuViewController.m in Sources */,
-				E526D7421FD325190042467F /* DifficultyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -50,7 +50,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *livesLabel;
 @property NSString* Livess;
 
-@property (weak, nonatomic) IBOutlet UIButton *inputDWrong;
+@property (weak, nonatomic) IBOutlet UIButton *inputDWrong; //These are the wrong inputs that will result into a life decreased if pressed
 @property (weak, nonatomic) IBOutlet UIButton *inputSWrong;
 @property (weak, nonatomic) IBOutlet UIButton *inputOWrong;
 @property (weak, nonatomic) IBOutlet UIButton *InputMWrong;

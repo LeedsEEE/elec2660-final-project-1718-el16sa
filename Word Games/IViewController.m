@@ -51,8 +51,8 @@ AVAudioPlayer *correct4;
     self.L4.hidden = true;
     NSURL *CorrectSound = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/correct.wav",[[NSBundle mainBundle] resourcePath]]];
     correct4 = [[AVAudioPlayer alloc] initWithContentsOfURL:CorrectSound error:nil];
-    lives5 = 3;
-    _Livess5 = [NSString stringWithFormat:@"Lives: 5"];
+    lives5 = 2;
+    _Livess5 = [NSString stringWithFormat:@"Lives: 2"];
     _LivesLabel5.text = _Livess5;
     
 }
@@ -185,12 +185,12 @@ AVAudioPlayer *correct4;
 - (IBAction)inputtR:(UIButton *)sender{
     if ([sender isSelected]) {
         NSLog(@"Selected");
-        [sender setImage:[UIImage imageNamed:@"t.png"] forState:UIControlStateNormal];
+        [sender setImage:[UIImage imageNamed:@"r.png"] forState:UIControlStateNormal];
         sender.selected = NO;
     }
     else { //no
         NSLog(@"Unselected");
-        [sender setImage: [UIImage imageNamed:@"t-red.png"]  forState: UIControlStateNormal];
+        [sender setImage: [UIImage imageNamed:@"r-red.png"]  forState: UIControlStateNormal];
         sender.selected = YES;
     }
     [self checkForSequence];

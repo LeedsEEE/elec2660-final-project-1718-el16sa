@@ -13,7 +13,7 @@
 @interface EViewController ()
 
 @end
-int lives;
+int lives; //Declare an integer called lives to use it later
 AVAudioPlayer *correct;
 
 @implementation EViewController
@@ -40,9 +40,10 @@ AVAudioPlayer *correct;
     // Originally the images with letters are hidden. They appear when the user chooses the word correctly from the options of inputs given. The button to proceed to the next level is also hidden at first since the user has to input a word correctly first.
     NSURL *CorrectSound = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/correct.wav",[[NSBundle mainBundle] resourcePath]]];
     correct = [[AVAudioPlayer alloc] initWithContentsOfURL:CorrectSound error:nil];
-    lives = 5;
-    _Livess = [NSString stringWithFormat:@"Lives: 5"];
-    _livesLabel.text = _Livess;
+    lives = 4; // lives starts with the value 4
+    _Livess = [NSString stringWithFormat:@"Lives: 4"]; // The NSString was declared in the header file and now refering back to it to make it appear in the viewcontroller
+    _livesLabel.text = _Livess; // Equating 'livesLabel' the label in the view controller to the value created based on the buttons pressed.
+    //https://minerva.leeds.ac.uk/bbcswebdav/pid-5223121-dt-content-rid-9579507_2/courses/201718_27046_ELEC2660/2%20-%20UIFun%283%29.pdf
 }
 
 - (void)didReceiveMemoryWarning {
