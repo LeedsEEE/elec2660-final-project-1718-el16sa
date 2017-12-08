@@ -8,6 +8,7 @@
 
 #import "EViewController.h"
 #import "ESecondViewController.h"
+#import "GameOverViewController.h"
 @import MediaPlayer;
 
 @interface EViewController ()
@@ -15,6 +16,7 @@
 @end
 int lives; //Declare an integer called lives to use it later
 AVAudioPlayer *correct;
+AVAudioPlayer *wrong;
 
 @implementation EViewController
 
@@ -38,13 +40,24 @@ AVAudioPlayer *correct;
     self.A4.hidden = true;
     self.NextLevelButton.hidden = false;
     // Originally the images with letters are hidden. They appear when the user chooses the word correctly from the options of inputs given. The button to proceed to the next level is also hidden at first since the user has to input a word correctly first.
+   
     NSURL *CorrectSound = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/correct.wav",[[NSBundle mainBundle] resourcePath]]];
     correct = [[AVAudioPlayer alloc] initWithContentsOfURL:CorrectSound error:nil];
+    // Correct Sound Reference: https://www.youtube.com/watch?v=I2ooKxIG9_0
+    NSURL *WrongSound = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/Buzzer.wav",[[NSBundle mainBundle] resourcePath]]];
+    wrong = [[AVAudioPlayer alloc] initWithContentsOfURL:WrongSound error:nil];
+// Reference for the soundeffects: https://www.youtube.com/watch?v=s7WUONH-jxM
+    
     lives = 4; // lives starts with the value 4
     _Livess = [NSString stringWithFormat:@"Lives: 4"]; // The NSString was declared in the header file and now refering back to it to make it appear in the viewcontroller
     _livesLabel.text = _Livess; // Equating 'livesLabel' the label in the view controller to the value created based on the buttons pressed.
-    //https://minerva.leeds.ac.uk/bbcswebdav/pid-5223121-dt-content-rid-9579507_2/courses/201718_27046_ELEC2660/2%20-%20UIFun%283%29.pdf
-}
+    //Reference Lab 2: https://minerva.leeds.ac.uk/bbcswebdav/pid-5223121-dt-content-rid-9579507_2/courses/201718_27046_ELEC2660/2%20-%20UIFun%283%29.pdf
+   
+    // Reference for the background: http://ak1.picdn.net/shutterstock/videos/863621/thumb/8.jpg
+//Reference for background: https://www.shutterstock.com/video/clip-7247311-stock-footage-writing-scientific-formulas-on-black-chalkboard-computer-generated.html
+//Font Reference: http://www.1001fonts.com/squeaky-chalk-sound-font.html
+    
+    }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -269,12 +282,13 @@ AVAudioPlayer *correct;
         
         [_inputQ setImage:[UIImage imageNamed:@"q.png"] forState:UIControlStateNormal];
         [_inputQ setSelected:NO];
-        
+        [wrong play];
     }
 }
 -(void)checkForSequence7{
     if (_inputSWrong.selected) {
         NSLog(@"pressed");
+        [wrong play];
         lives = lives-1;
         _Livess = [NSString stringWithFormat:@"Lives: %i",lives];
         _livesLabel.text = _Livess;
@@ -283,10 +297,30 @@ AVAudioPlayer *correct;
         [_inputSWrong setSelected:NO];
         
     }
+    if (lives == 0) {
+        [self GameOverE];
+    }
+}
+-(void)checkForSequence11{
+    if (_inputDWrong.selected) {
+        NSLog(@"pressed");
+        [wrong play];
+        lives = lives-1;
+        _Livess = [NSString stringWithFormat:@"Lives: %i",lives];
+        _livesLabel.text = _Livess;
+        
+        [_inputSWrong setImage:[UIImage imageNamed:@"s.png"] forState:UIControlStateNormal];
+        [_inputSWrong setSelected:NO];
+        
+    }
+    if (lives == 0) {
+        [self GameOverE];
+    }
 }
 - (IBAction)inputSWrongg:(UIButton *)sender {
     if ([sender isSelected]) {
         NSLog(@"unselected");
+        
         [sender setImage:[UIImage imageNamed:@"s.png"] forState:UIControlStateNormal];
         sender.selected = NO;
     }
@@ -337,10 +371,13 @@ AVAudioPlayer *correct;
         lives = lives-1;
         _Livess = [NSString stringWithFormat:@"Lives: %i",lives];
         _livesLabel.text = _Livess;
-        
+         [wrong play];
         [_inputOWrong setImage:[UIImage imageNamed:@"o.png"] forState:UIControlStateNormal];
         [_inputOWrong setSelected:NO];
         
+    }
+    if (lives == 0) {
+        [self GameOverE];
     }
 }
 -(void)checkForSequence9{
@@ -349,10 +386,13 @@ AVAudioPlayer *correct;
         lives = lives-1;
         _Livess = [NSString stringWithFormat:@"Lives: %i",lives];
         _livesLabel.text = _Livess;
-        
+         [wrong play];
         [_inputDWrong setImage:[UIImage imageNamed:@"d.png"] forState:UIControlStateNormal];
         [_inputDWrong setSelected:NO];
         
+    }
+    if (lives == 0) {
+        [self GameOverE];
     }
 }
 
@@ -362,16 +402,20 @@ AVAudioPlayer *correct;
         lives = lives-1;
         _Livess = [NSString stringWithFormat:@"Lives: %i",lives];
         _livesLabel.text = _Livess;
-        
+         [wrong play];
         [_InputMWrong setImage:[UIImage imageNamed:@"m.png"] forState:UIControlStateNormal];
         [_InputMWrong setSelected:NO];
         
+    }
+    if (lives == 0) {
+        [self GameOverE];
     }
 }
 
 - (IBAction)inputMWrong:(UIButton *)sender {
     if ([sender isSelected]) {
         NSLog(@"unselected");
+        
         [sender setImage:[UIImage imageNamed:@"m.png"] forState:UIControlStateNormal];
         sender.selected = NO;
     }
@@ -434,6 +478,13 @@ AVAudioPlayer *correct;
     ESecondViewController *EViewController;
     EViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ESecondViewController"];
     [self presentViewController:EViewController animated:YES completion:nil];
+    //Reference: https://stackoverflow.com/questions/19573185/moving-to-another-view-controller-in-ios-on-button-click
+   // && https://www.youtube.com/watch?v=dvN6IOpTtyc
 }
 
+-(void)GameOverE{
+    GameOverViewController *EViewController;
+    EViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"GameOverViewController"];
+    [self presentViewController:EViewController animated:YES completion:nil];
+}
 @end

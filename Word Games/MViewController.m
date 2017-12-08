@@ -8,12 +8,14 @@
 
 #import "MViewController.h"
 #import "MSecondViewController.h"
+#import "GameOverViewController.h"
 @import MediaPlayer;
 @interface MViewController ()
 
 @end
 int lives3;
 AVAudioPlayer *correct2;
+AVAudioPlayer *wrong3;
 
 
 @implementation MViewController
@@ -47,6 +49,9 @@ AVAudioPlayer *correct2;
     lives3 = 3;
     _Livess3 = [NSString stringWithFormat:@"Lives: 3"];
     _LivesLabel3.text = _Livess3;
+    
+    NSURL *WrongSound3 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/Buzzer.wav",[[NSBundle mainBundle] resourcePath]]];
+    wrong3 = [[AVAudioPlayer alloc] initWithContentsOfURL:WrongSound3 error:nil];
 }
 
 
@@ -287,7 +292,7 @@ AVAudioPlayer *correct2;
 -(void)checkForSequence7{
     if (_inputQWrong.selected) {
         
-        [correct2 play];
+        [wrong3 play];
         lives3 = lives3-1;
         _Livess3 = [NSString stringWithFormat:@"Lives: %i",lives3];
         _LivesLabel3.text = _Livess3;
@@ -299,11 +304,14 @@ AVAudioPlayer *correct2;
         
         
     }
+    if (lives3 == 0) {
+        [self GameOverM];
+    }
 }
 -(void)checkForSequence8{
     if (_inputTWrong.selected) {
         
-        [correct2 play];
+        [wrong3 play];
         lives3 = lives3-1;
         _Livess3 = [NSString stringWithFormat:@"Lives: %i",lives3];
         _LivesLabel3.text = _Livess3;
@@ -315,11 +323,14 @@ AVAudioPlayer *correct2;
         
         
     }
+    if (lives3 == 0) {
+        [self GameOverM];
+    }
 }
 -(void)checkForSequence9{
     if (_inputMWrong.selected) {
         
-        [correct2 play];
+        [wrong3 play];
         lives3 = lives3-1;
         _Livess3 = [NSString stringWithFormat:@"Lives: %i",lives3];
         _LivesLabel3.text = _Livess3;
@@ -331,11 +342,14 @@ AVAudioPlayer *correct2;
         
         
     }
+    if (lives3 == 0) {
+        [self GameOverM];
+    }
 }
 -(void)checkForSequence10{
     if (_inputIWrong.selected) {
         
-        [correct2 play];
+        [wrong3 play];
         lives3 = lives3-1;
         _Livess3 = [NSString stringWithFormat:@"Lives: %i",lives3];
         _LivesLabel3.text = _Livess3;
@@ -346,6 +360,9 @@ AVAudioPlayer *correct2;
         
         
         
+    }
+    if (lives3 == 0) {
+        [self GameOverM];
     }
 }
 
@@ -460,6 +477,11 @@ AVAudioPlayer *correct2;
     [self checkForSequence9];
     [self checkForSequence10];
     
+}
+-(void)GameOverM{
+    GameOverViewController *MViewController;
+    MViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"GameOverViewController"];
+    [self presentViewController:MViewController animated:YES completion:nil];
 }
     @end
     

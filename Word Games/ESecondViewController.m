@@ -7,6 +7,7 @@
 //
 
 #import "ESecondViewController.h"
+#import "GameOverViewController.h"
 @import MediaPlayer;
 
 @interface ESecondViewController ()
@@ -14,6 +15,7 @@
 @end
 int lives2;
 AVAudioPlayer *correct1;
+AVAudioPlayer *wrong2;
 
 
 @implementation ESecondViewController
@@ -42,6 +44,9 @@ AVAudioPlayer *correct1;
     lives2 = 4;
     _Livess2 = [NSString stringWithFormat:@"Lives: 4"];
     _livesLabel2.text = _Livess2;
+    
+    NSURL *WrongSound2 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/Buzzer.wav",[[NSBundle mainBundle] resourcePath]]];
+    wrong2 = [[AVAudioPlayer alloc] initWithContentsOfURL:WrongSound2 error:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -286,32 +291,38 @@ AVAudioPlayer *correct1;
         _Livess2 = [NSString stringWithFormat:@"Lives: %i",lives2];
         _livesLabel2.text = _Livess2;
         
-        [correct1 play];
+        [wrong2 play];
         [_inputSWrong setImage:[UIImage imageNamed:@"s.png"] forState:UIControlStateNormal];
         [_inputSWrong setSelected:NO];
         
     }
     
-    
+    if (lives2 == 0) {
+        [self GameOverES];
+    }
 }
 -(void)checkForSequence8{
     if (_inputAWrong.selected) {
         NSLog(@"pressed");
-        [correct1 play];
+        
         lives2 = lives2-1;
         _Livess2 = [NSString stringWithFormat:@"Lives: %i",lives2];
         _livesLabel2.text = _Livess2;
+        
+        [wrong2 play];
         [_inputAWrong setImage:[UIImage imageNamed:@"a.png"] forState:UIControlStateNormal];
         [_inputAWrong setSelected:NO];
        
     }
-    
+    if (lives2 == 0) {
+        [self GameOverES];
+    }
     
 }
 -(void)checkForSequence9{
     if (_inputQWrong.selected) {
         NSLog(@"pressed");
-        [correct1 play];
+        [wrong2 play];
         lives2 = lives2-1;
         _Livess2 = [NSString stringWithFormat:@"Lives: %i",lives2];
         _livesLabel2.text = _Livess2;
@@ -319,19 +330,25 @@ AVAudioPlayer *correct1;
         [_inputQWrong setSelected:NO];
         
     }
+    if (lives2 == 0) {
+        [self GameOverES];
+    }
     
     
 }
 -(void)checkForSequence10{
     if (_inputIWrong.selected) {
         NSLog(@"pressed");
-        [correct1 play];
+        [wrong2 play];
         lives2 = lives2-1;
         _Livess2 = [NSString stringWithFormat:@"Lives: %i",lives2];
         _livesLabel2.text = _Livess2;
         [_inputIWrong setImage:[UIImage imageNamed:@"i.png"] forState:UIControlStateNormal];
         [_inputIWrong setSelected:NO];
         
+    }
+    if (lives2 == 0) {
+        [self GameOverES];
     }
     
     
@@ -426,6 +443,15 @@ AVAudioPlayer *correct1;
     [self checkForSequence9];
     [self checkForSequence10];
 }
+
+
+-(void)GameOverES{
+    GameOverViewController *ESecondViewController;
+    ESecondViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"GameOverViewController"];
+    [self presentViewController:ESecondViewController animated:YES completion:nil];
+}
+
+
 @end
 
 

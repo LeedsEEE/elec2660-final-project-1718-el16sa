@@ -94,6 +94,13 @@
 		E5751A071FDA64E1008C2606 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5751A061FDA64E1008C2606 /* AudioToolbox.framework */; };
 		E5751A091FDA65CD008C2606 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5751A081FDA65CD008C2606 /* AVFoundation.framework */; };
 		E5751A0B1FDA67BC008C2606 /* correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = E5751A0A1FDA67BC008C2606 /* correct.wav */; };
+		E5751A0E1FDAAE43008C2606 /* GameOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5751A0D1FDAAE43008C2606 /* GameOverViewController.m */; };
+		E5751A1E1FDABAF7008C2606 /* layer13.png in Resources */ = {isa = PBXBuildFile; fileRef = E5751A101FDABAF7008C2606 /* layer13.png */; };
+		E5751A2F1FDAC43D008C2606 /* layer.png in Resources */ = {isa = PBXBuildFile; fileRef = E5751A2E1FDAC43D008C2606 /* layer.png */; };
+		E5751A311FDACCDE008C2606 /* Buzzer.wav in Resources */ = {isa = PBXBuildFile; fileRef = E5751A301FDACCDE008C2606 /* Buzzer.wav */; };
+		E5751A331FDAD403008C2606 /* Screen Shot 2017-12-08 at 2.06.09 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = E5751A321FDAD403008C2606 /* Screen Shot 2017-12-08 at 2.06.09 PM.png */; };
+		E5751A3A1FDAD6CD008C2606 /* understandd.png in Resources */ = {isa = PBXBuildFile; fileRef = E5751A381FDAD6CD008C2606 /* understandd.png */; };
+		E5751A3B1FDAD6CD008C2606 /* objectivee.png in Resources */ = {isa = PBXBuildFile; fileRef = E5751A391FDAD6CD008C2606 /* objectivee.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -215,6 +222,14 @@
 		E5751A061FDA64E1008C2606 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		E5751A081FDA65CD008C2606 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E5751A0A1FDA67BC008C2606 /* correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = correct.wav; path = ../../../Downloads/files/correct.wav; sourceTree = "<group>"; };
+		E5751A0C1FDAAE43008C2606 /* GameOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverViewController.h; sourceTree = "<group>"; };
+		E5751A0D1FDAAE43008C2606 /* GameOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverViewController.m; sourceTree = "<group>"; };
+		E5751A101FDABAF7008C2606 /* layer13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = layer13.png; path = ../../../Downloads/layer/layer13.png; sourceTree = "<group>"; };
+		E5751A2E1FDAC43D008C2606 /* layer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = layer.png; sourceTree = "<group>"; };
+		E5751A301FDACCDE008C2606 /* Buzzer.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Buzzer.wav; sourceTree = "<group>"; };
+		E5751A321FDAD403008C2606 /* Screen Shot 2017-12-08 at 2.06.09 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2017-12-08 at 2.06.09 PM.png"; sourceTree = "<group>"; };
+		E5751A381FDAD6CD008C2606 /* understandd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = understandd.png; path = ../understandd.png; sourceTree = "<group>"; };
+		E5751A391FDAD6CD008C2606 /* objectivee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = objectivee.png; path = ../objectivee.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -332,6 +347,8 @@
 			children = (
 				E526D6E71FC780950042467F /* AppDelegate.m */,
 				E526D6E61FC780950042467F /* AppDelegate.h */,
+				E5751A0C1FDAAE43008C2606 /* GameOverViewController.h */,
+				E5751A0D1FDAAE43008C2606 /* GameOverViewController.m */,
 				E526D73D1FD212B20042467F /* MenuViewController.h */,
 				E526D73E1FD212B20042467F /* MenuViewController.m */,
 				E526D7431FD3472E0042467F /* EViewController.h */,
@@ -347,14 +364,20 @@
 				E526D74C1FD3475F0042467F /* ISecondViewController.h */,
 				E526D74D1FD3475F0042467F /* ISecondViewController.m */,
 				E526D6EC1FC780950042467F /* Main.storyboard */,
+				E5751A321FDAD403008C2606 /* Screen Shot 2017-12-08 at 2.06.09 PM.png */,
+				E5751A2E1FDAC43D008C2606 /* layer.png */,
 				E57519FD1FDA624E008C2606 /* in.png */,
 				E57519FE1FDA624E008C2606 /* me.png */,
 				E57519FF1FDA624E008C2606 /* el.png */,
 				E5751A001FDA624E008C2606 /* Dif.png */,
 				E57519FB1FDA56E4008C2606 /* newgame.png */,
+				E5751A381FDAD6CD008C2606 /* understandd.png */,
+				E5751A391FDAD6CD008C2606 /* objectivee.png */,
 				E57519F91FDA5698008C2606 /* play.png */,
 				E526D7AF1FD9F4880042467F /* box.png */,
 				E526D7AD1FD9F34C0042467F /* Game_background.jpg */,
+				E5751A101FDABAF7008C2606 /* layer13.png */,
+				E5751A301FDACCDE008C2606 /* Buzzer.wav */,
 				E5751A0A1FDA67BC008C2606 /* correct.wav */,
 				E526D6EF1FC780950042467F /* Assets.xcassets */,
 				E526D6F11FC780960042467F /* LaunchScreen.storyboard */,
@@ -533,6 +556,8 @@
 				E526D7B01FD9F4880042467F /* box.png in Resources */,
 				E526D7631FD5C6280042467F /* s_red.png in Resources */,
 				E526D7971FD9F3030042467F /* s.png in Resources */,
+				E5751A3A1FDAD6CD008C2606 /* understandd.png in Resources */,
+				E5751A1E1FDABAF7008C2606 /* layer13.png in Resources */,
 				E526D7721FD9BD420042467F /* Icons in Resources */,
 				E526D7A01FD9F3040042467F /* m.png in Resources */,
 				E526D79C1FD9F3030042467F /* q-red.png in Resources */,
@@ -540,6 +565,7 @@
 				E526D7701FD5C6290042467F /* m_empty.png in Resources */,
 				E526D72C1FC788440042467F /* d_red.png in Resources */,
 				E526D79D1FD9F3030042467F /* o-red.png in Resources */,
+				E5751A331FDAD403008C2606 /* Screen Shot 2017-12-08 at 2.06.09 PM.png in Resources */,
 				E526D76A1FD5C6290042467F /* w_empty.png in Resources */,
 				E526D7941FD9F3030042467F /* w-red.png in Resources */,
 				E526D7681FD5C6280042467F /* y_red.png in Resources */,
@@ -548,9 +574,11 @@
 				E526D72A1FC788440042467F /* o_red.png in Resources */,
 				E526D76B1FD5C6290042467F /* l_empty.png in Resources */,
 				E5751A021FDA624E008C2606 /* me.png in Resources */,
+				E5751A2F1FDAC43D008C2606 /* layer.png in Resources */,
 				E526D7AC1FD9F3040042467F /* a.png in Resources */,
 				E526D72F1FC788440042467F /* e_empty.png in Resources */,
 				E526D7661FD5C6280042467F /* q_red.png in Resources */,
+				E5751A3B1FDAD6CD008C2606 /* objectivee.png in Resources */,
 				E526D79A1FD9F3030042467F /* r.png in Resources */,
 				E526D76F1FD5C6290042467F /* q_empty.png in Resources */,
 				E526D72E1FC788440042467F /* e_red.png in Resources */,
@@ -570,6 +598,7 @@
 				E5751A041FDA624E008C2606 /* Dif.png in Resources */,
 				E526D7AE1FD9F34C0042467F /* Game_background.jpg in Resources */,
 				E5751A011FDA624E008C2606 /* in.png in Resources */,
+				E5751A311FDACCDE008C2606 /* Buzzer.wav in Resources */,
 				E526D7961FD9F3030042467F /* t.png in Resources */,
 				E526D7611FD5C6280042467F /* w_red.png in Resources */,
 				E526D7601FD5C6280042467F /* n_red.png in Resources */,
@@ -612,6 +641,7 @@
 				E526D6E81FC780950042467F /* AppDelegate.m in Sources */,
 				E526D6E51FC780950042467F /* main.m in Sources */,
 				E526D7451FD3472E0042467F /* EViewController.m in Sources */,
+				E5751A0E1FDAAE43008C2606 /* GameOverViewController.m in Sources */,
 				E526D73F1FD212B20042467F /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

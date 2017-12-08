@@ -7,6 +7,7 @@
 //
 
 #import "ISecondViewController.h"
+#import "GameOverViewController.h"
 @import MediaPlayer;
 
 @interface ISecondViewController ()
@@ -14,6 +15,7 @@
 @end
 int lives6;
 AVAudioPlayer *correct5;
+AVAudioPlayer *wrong6;
 
 @implementation ISecondViewController
 
@@ -48,6 +50,10 @@ AVAudioPlayer *correct5;
     lives6 = 2;
     _Livess6 = [NSString stringWithFormat:@"Lives: 2"];
     _LivesLabel6.text = _Livess6;
+    
+    NSURL *WrongSound6 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/Buzzer.wav",[[NSBundle mainBundle] resourcePath]]];
+    wrong6 = [[AVAudioPlayer alloc] initWithContentsOfURL:WrongSound6 error:nil];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -283,7 +289,7 @@ AVAudioPlayer *correct5;
         
         
         
-        [correct5 play];
+        [wrong6 play];
         lives6 = lives6-1;
         _Livess6 = [NSString stringWithFormat:@"Lives: %i",lives6];
         _LivesLabel6.text = _Livess6;
@@ -294,13 +300,16 @@ AVAudioPlayer *correct5;
         
         
     }
+    if (lives6 == 0) {
+        [self GameOver];
+    }
 }
 -(void)checkForSequence8{
     if (_inputFWrong.selected) {
         
         
         
-        [correct5 play];
+        [wrong6 play];
         lives6 = lives6-1;
         _Livess6 = [NSString stringWithFormat:@"Lives: %i",lives6];
         _LivesLabel6.text = _Livess6;
@@ -311,13 +320,16 @@ AVAudioPlayer *correct5;
         
         
     }
+    if (lives6 == 0) {
+        [self GameOver];
+}
 }
 -(void)checkForSequence9{
     if (_inputDWrong.selected) {
         
         
         
-        [correct5 play];
+        [wrong6 play];
         lives6 = lives6-1;
         _Livess6 = [NSString stringWithFormat:@"Lives: %i",lives6];
         _LivesLabel6.text = _Livess6;
@@ -328,13 +340,16 @@ AVAudioPlayer *correct5;
         
         
     }
+    if (lives6 == 0) {
+        [self GameOver];
+    }
 }
 -(void)checkForSequence10{
     if (_inputAWrong.selected) {
         
         
         
-        [correct5 play];
+        [wrong6 play];
         lives6 = lives6-1;
         _Livess6 = [NSString stringWithFormat:@"Lives: %i",lives6];
         _LivesLabel6.text = _Livess6;
@@ -345,8 +360,10 @@ AVAudioPlayer *correct5;
         
         
     }
+    if (lives6 == 0) {
+        [self GameOver];
 }
-
+}
 
 
 - (IBAction)inputtFWrong:(UIButton *)sender {
@@ -440,6 +457,18 @@ AVAudioPlayer *correct5;
     [self checkForSequence9];
     [self checkForSequence10];
 }
+
+
+-(void)GameOver{
+    GameOverViewController *ISecondViewController;
+    ISecondViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"GameOverViewController"];
+    [self presentViewController:ISecondViewController animated:YES completion:nil];
+    
+}
+
+
+
+
 @end
 
 

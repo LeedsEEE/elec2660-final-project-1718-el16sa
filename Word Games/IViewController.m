@@ -8,6 +8,7 @@
 
 #import "IViewController.h"
 #import "ISecondViewController.h"
+#import "GameOverViewController.h"
 @import MediaPlayer;
 
 @interface IViewController ()
@@ -15,6 +16,7 @@
 @end
 int lives5;
 AVAudioPlayer *correct4;
+AVAudioPlayer *wrong5;
 
 @implementation IViewController
 
@@ -54,6 +56,10 @@ AVAudioPlayer *correct4;
     lives5 = 2;
     _Livess5 = [NSString stringWithFormat:@"Lives: 2"];
     _LivesLabel5.text = _Livess5;
+    
+    NSURL *WrongSound5 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/Buzzer.wav",[[NSBundle mainBundle] resourcePath]]];
+    wrong5 = [[AVAudioPlayer alloc] initWithContentsOfURL:WrongSound5 error:nil];
+
     
 }
 
@@ -325,7 +331,7 @@ AVAudioPlayer *correct4;
         
         
         
-        [correct4 play];
+        [wrong5 play];
         lives5 = lives5-1;
         _Livess5 = [NSString stringWithFormat:@"Lives: %i",lives5];
         _LivesLabel5.text = _Livess5;
@@ -336,13 +342,16 @@ AVAudioPlayer *correct4;
         
         
     }
+    if (lives5 == 0) {
+        [self GameOver2];
+    }
 }
 -(void)checkForSequence8{
     if (_inputFWrong.selected) {
         
         
         
-        [correct4 play];
+        [wrong5 play];
         lives5 = lives5-1;
         _Livess5 = [NSString stringWithFormat:@"Lives: %i",lives5];
         _LivesLabel5.text = _Livess5;
@@ -352,6 +361,9 @@ AVAudioPlayer *correct4;
         
         
     }
+    if (lives5 == 0) {
+        [self GameOver2];
+    }
 }
 -(void)checkForSequence9{
     if (_inputDWrong.selected) {
@@ -360,13 +372,16 @@ AVAudioPlayer *correct4;
         _Livess5 = [NSString stringWithFormat:@"Lives: %i",lives5];
         _LivesLabel5.text = _Livess5;
         
-        [correct4 play];
+        [wrong5 play];
         
         [_inputDWrong setImage:[UIImage imageNamed:@"d.png"] forState:UIControlStateNormal];
         [_inputDWrong setSelected:NO];
         
         
         
+    }
+    if (lives5 == 0) {
+        [self GameOver2];
     }
 }
 -(void)checkForSequence10{
@@ -376,13 +391,16 @@ AVAudioPlayer *correct4;
         _Livess5 = [NSString stringWithFormat:@"Lives: %i",lives5];
         _LivesLabel5.text = _Livess5;
         
-        [correct4 play];
+        [wrong5 play];
         
         [_inputWWrong setImage:[UIImage imageNamed:@"w.png"] forState:UIControlStateNormal];
         [_inputWWrong setSelected:NO];
         
         
         
+    }
+    if (lives5 == 0) {
+        [self GameOver2];
     }
 }
 
@@ -493,6 +511,12 @@ AVAudioPlayer *correct4;
     [self checkForSequence10];
 }
 
+-(void)GameOver2{
+    GameOverViewController *IViewController;
+    IViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"GameOverViewController"];
+    [self presentViewController:IViewController animated:YES completion:nil];
+    
+}
 
 @end
 
