@@ -55,12 +55,12 @@
 - (IBAction)inputtQ:(UIButton *)sender { // The action that i declared in the header file is imported into the main file to be able to use it.
     if ([sender isSelected]) { // An if statement is used to place a condition if the button is selected.
         NSLog(@"Unselected"); // The NSLOG function does not affect the functionality. It displays the value "selected" in the built in log in xcode so observe whether it actually works.
-        [sender setImage:[UIImage imageNamed:@"q_empty.png"] forState:UIControlStateNormal];
+        [sender setImage:[UIImage imageNamed:@"q.png"] forState:UIControlStateNormal];
         sender.selected = NO;// if user did not select button, send to NSLog "Unselected" and keep selected image.
     }
     else { //no // if user did select button change image to the other selected image.
         NSLog(@"Selected");
-        [sender setImage: [UIImage imageNamed:@"q_red.png"]  forState: UIControlStateNormal];
+        [sender setImage: [UIImage imageNamed:@"q-red.png"]  forState: UIControlStateNormal];
         sender.selected = YES;
 } //Reference AVAudioPlayer Lab: https://minerva.leeds.ac.uk/bbcswebdav/pid-5341615-dt-content-rid-9710025_2/courses/201718_27046_ELEC2660/podcasts/Lab%206.mp4
     [self checkForSequence];
@@ -76,12 +76,12 @@
 - (IBAction)inputtW:(UIButton *)sender {
     if ([sender isSelected]) {
         NSLog(@"unselected");
-        [sender setImage:[UIImage imageNamed:@"w_empty.png"] forState:UIControlStateNormal];
+        [sender setImage:[UIImage imageNamed:@"w.png"] forState:UIControlStateNormal];
         sender.selected = NO;
     }
     else { //no
         NSLog(@"selected");
-        [sender setImage: [UIImage imageNamed:@"w_red.png"]  forState: UIControlStateNormal];
+        [sender setImage: [UIImage imageNamed:@"w-red.png"]  forState: UIControlStateNormal];
         sender.selected = YES;
 }
     [self checkForSequence];
@@ -97,12 +97,12 @@
 - (IBAction)inputtE:(UIButton *)sender {
     if ([sender isSelected]) {
         NSLog(@"unselected");
-        [sender setImage:[UIImage imageNamed:@"e_empty.png"] forState:UIControlStateNormal];
+        [sender setImage:[UIImage imageNamed:@"e.png"] forState:UIControlStateNormal];
         sender.selected = NO;
     }
     else { //no
         NSLog(@"selected");
-        [sender setImage: [UIImage imageNamed:@"e_red.png"]  forState: UIControlStateNormal];
+        [sender setImage: [UIImage imageNamed:@"e-red.png"]  forState: UIControlStateNormal];
         sender.selected = YES;
 }
     [self checkForSequence];
@@ -118,12 +118,12 @@
 - (IBAction)inputtR:(UIButton *)sender {
     if ([sender isSelected]) {
         NSLog(@"Selected");
-        [sender setImage:[UIImage imageNamed:@"r_empty.png"] forState:UIControlStateNormal];
+        [sender setImage:[UIImage imageNamed:@"r.png"] forState:UIControlStateNormal];
         sender.selected = NO;
     }
     else { //no
         NSLog(@"Unselected");
-        [sender setImage: [UIImage imageNamed:@"r_red.png"]  forState: UIControlStateNormal];
+        [sender setImage: [UIImage imageNamed:@"r-red.png"]  forState: UIControlStateNormal];
         sender.selected = YES;
 }
     [self checkForSequence];
@@ -139,12 +139,12 @@
 - (IBAction)inputtT:(UIButton *)sender {
     if ([sender isSelected]) {
         NSLog(@"Selected");
-        [sender setImage:[UIImage imageNamed:@"t_empty.png"] forState:UIControlStateNormal];
+        [sender setImage:[UIImage imageNamed:@"t.png"] forState:UIControlStateNormal];
         sender.selected = NO;
     }
     else { //no
         NSLog(@"Unselected");
-        [sender setImage: [UIImage imageNamed:@"t_red.png"]  forState: UIControlStateNormal];
+        [sender setImage: [UIImage imageNamed:@"t-red.png"]  forState: UIControlStateNormal];
         sender.selected = YES;
 }
     [self checkForSequence];
@@ -160,12 +160,12 @@
 - (IBAction)inputtA:(UIButton *)sender {
     if ([sender isSelected]) {
         NSLog(@"Selected");
-        [sender setImage:[UIImage imageNamed:@"a_empty.png"] forState:UIControlStateNormal];
+        [sender setImage:[UIImage imageNamed:@"a.png"] forState:UIControlStateNormal];
         sender.selected = NO;
     }
     else { //no
         NSLog(@"Unselected");
-        [sender setImage: [UIImage imageNamed:@"a_red.png"]  forState: UIControlStateNormal];
+        [sender setImage: [UIImage imageNamed:@"a-red.png"]  forState: UIControlStateNormal];
         sender.selected = YES;
 }
     [self checkForSequence];
@@ -180,17 +180,18 @@
 
 }
 
+
 -(void)checkForSequence{
     if (_inputR.selected && _inputA.selected && _inputT.selected) {
         NSLog(@"pressed");
         self.R1.hidden = false;
         self.A1.hidden = false;
         self.T1.hidden = false;
-        [_inputR setImage:[UIImage imageNamed:@"r_empty.png"] forState:UIControlStateNormal];
+        [_inputR setImage:[UIImage imageNamed:@"r.png"] forState:UIControlStateNormal];
         [_inputR setSelected:NO];
-        [_inputA setImage:[UIImage imageNamed:@"a_empty.png"] forState:UIControlStateNormal];
+        [_inputA setImage:[UIImage imageNamed:@"a.png"] forState:UIControlStateNormal];
         [_inputA setSelected:NO];
-        [_inputT setImage:[UIImage imageNamed:@"t_empty.png"] forState:UIControlStateNormal];
+        [_inputT setImage:[UIImage imageNamed:@"t.png"] forState:UIControlStateNormal];
         [_inputT setSelected:NO];
         
     }
@@ -216,11 +217,11 @@
         self.R2.hidden = false;
         self.A2.hidden = false;
         self.W1.hidden = false;
-        [_inputR setImage:[UIImage imageNamed:@"r_empty.png"] forState:UIControlStateNormal];
+        [_inputR setImage:[UIImage imageNamed:@"r.png"] forState:UIControlStateNormal];
         [_inputR setSelected:NO];
-        [_inputA setImage:[UIImage imageNamed:@"a_empty.png"] forState:UIControlStateNormal];
+        [_inputA setImage:[UIImage imageNamed:@"a.png"] forState:UIControlStateNormal];
         [_inputA setSelected:NO];
-        [_inputW setImage:[UIImage imageNamed:@"w_empty.png"] forState:UIControlStateNormal];
+        [_inputW setImage:[UIImage imageNamed:@"w.png"] forState:UIControlStateNormal];
         [_inputW setSelected:NO];
         
     }
@@ -246,11 +247,11 @@
         self.W2.hidden = false;
         self.E1.hidden = false;
         self.T2.hidden = false;
-        [_inputW setImage:[UIImage imageNamed:@"w_empty.png"] forState:UIControlStateNormal];
+        [_inputW setImage:[UIImage imageNamed:@"w.png"] forState:UIControlStateNormal];
         [_inputW setSelected:NO];
-        [_inputE setImage:[UIImage imageNamed:@"e_empty.png"] forState:UIControlStateNormal];
+        [_inputE setImage:[UIImage imageNamed:@"e.png"] forState:UIControlStateNormal];
         [_inputE setSelected:NO];
-        [_inputT setImage:[UIImage imageNamed:@"t_empty.png"] forState:UIControlStateNormal];
+        [_inputT setImage:[UIImage imageNamed:@"t.png"] forState:UIControlStateNormal];
         [_inputT setSelected:NO];
         
     }
@@ -276,11 +277,11 @@
         self.T3.hidden = false;
         self.E2.hidden = false;
         self.A3.hidden = false;
-        [_inputT setImage:[UIImage imageNamed:@"t_empty.png"] forState:UIControlStateNormal];
+        [_inputT setImage:[UIImage imageNamed:@"t.png"] forState:UIControlStateNormal];
         [_inputT setSelected:NO];
-        [_inputE setImage:[UIImage imageNamed:@"e_empty.png"] forState:UIControlStateNormal];
+        [_inputE setImage:[UIImage imageNamed:@"e.png"] forState:UIControlStateNormal];
         [_inputE setSelected:NO];
-        [_inputA setImage:[UIImage imageNamed:@"a_empty.png"] forState:UIControlStateNormal];
+        [_inputA setImage:[UIImage imageNamed:@"a.png"] forState:UIControlStateNormal];
         [_inputA setSelected:NO];
         
     }
@@ -306,11 +307,11 @@
         self.A4.hidden = false;
         self.R4.hidden = false;
         self.E3.hidden = false;
-        [_inputA setImage:[UIImage imageNamed:@"a_empty.png"] forState:UIControlStateNormal];
+        [_inputA setImage:[UIImage imageNamed:@"a.png"] forState:UIControlStateNormal];
         [_inputA setSelected:NO];
-        [_inputR setImage:[UIImage imageNamed:@"r_empty.png"] forState:UIControlStateNormal];
+        [_inputR setImage:[UIImage imageNamed:@"r.png"] forState:UIControlStateNormal];
         [_inputR setSelected:NO];
-        [_inputE setImage:[UIImage imageNamed:@"e_empty.png"] forState:UIControlStateNormal];
+        [_inputE setImage:[UIImage imageNamed:@"e.png"] forState:UIControlStateNormal];
         [_inputE setSelected:NO];
         
     }
@@ -333,11 +334,11 @@
 -(void)checkForSequence6{
     if (_inputA.selected && _inputW.selected && _inputE.selected) {
         NSLog(@"pressed");
-        [_inputA setImage:[UIImage imageNamed:@"a_empty.png"] forState:UIControlStateNormal];
+        [_inputA setImage:[UIImage imageNamed:@"a.png"] forState:UIControlStateNormal];
         [_inputA setSelected:NO];
-        [_inputW setImage:[UIImage imageNamed:@"w_empty.png"] forState:UIControlStateNormal];
+        [_inputW setImage:[UIImage imageNamed:@"w.png"] forState:UIControlStateNormal];
         [_inputW setSelected:NO];
-        [_inputE setImage:[UIImage imageNamed:@"e_empty.png"] forState:UIControlStateNormal];
+        [_inputE setImage:[UIImage imageNamed:@"e.png"] forState:UIControlStateNormal];
         [_inputE setSelected:NO];
         
     }
@@ -345,11 +346,11 @@
 -(void)checkForSequence7{
     if (_inputE.selected && _inputA.selected && _inputR.selected) {
         NSLog(@"pressed");
-        [_inputE setImage:[UIImage imageNamed:@"e_empty.png"] forState:UIControlStateNormal];
+        [_inputE setImage:[UIImage imageNamed:@"e.png"] forState:UIControlStateNormal];
         [_inputE setSelected:NO];
-        [_inputA setImage:[UIImage imageNamed:@"a_empty.png"] forState:UIControlStateNormal];
+        [_inputA setImage:[UIImage imageNamed:@"a.png"] forState:UIControlStateNormal];
         [_inputA setSelected:NO];
-        [_inputR setImage:[UIImage imageNamed:@"r_empty.png"] forState:UIControlStateNormal];
+        [_inputR setImage:[UIImage imageNamed:@"r.png"] forState:UIControlStateNormal];
         [_inputR setSelected:NO];
         
     }
@@ -357,11 +358,11 @@
 -(void)checkForSequence8{
     if (_inputT.selected && _inputA.selected && _inputR.selected) {
         NSLog(@"pressed");
-        [_inputT setImage:[UIImage imageNamed:@"t_empty.png"] forState:UIControlStateNormal];
+        [_inputT setImage:[UIImage imageNamed:@"t.png"] forState:UIControlStateNormal];
         [_inputT setSelected:NO];
-        [_inputA setImage:[UIImage imageNamed:@"a_empty.png"] forState:UIControlStateNormal];
+        [_inputA setImage:[UIImage imageNamed:@"a.png"] forState:UIControlStateNormal];
         [_inputA setSelected:NO];
-        [_inputR setImage:[UIImage imageNamed:@"r_empty.png"] forState:UIControlStateNormal];
+        [_inputR setImage:[UIImage imageNamed:@"r.png"] forState:UIControlStateNormal];
         [_inputR setSelected:NO];
         
     }
@@ -369,18 +370,18 @@
 -(void)checkForSequence9{
     if (_inputW.selected && _inputA.selected && _inputR.selected) {
         NSLog(@"pressed");
-        [_inputW setImage:[UIImage imageNamed:@"w_empty.png"] forState:UIControlStateNormal];
+        [_inputW setImage:[UIImage imageNamed:@"w.png"] forState:UIControlStateNormal];
         [_inputW setSelected:NO];
-        [_inputA setImage:[UIImage imageNamed:@"a_empty.png"] forState:UIControlStateNormal];
+        [_inputA setImage:[UIImage imageNamed:@"a.png"] forState:UIControlStateNormal];
         [_inputA setSelected:NO];
-        [_inputR setImage:[UIImage imageNamed:@"r_empty.png"] forState:UIControlStateNormal];
+        [_inputR setImage:[UIImage imageNamed:@"r.png"] forState:UIControlStateNormal];
         [_inputR setSelected:NO];
         
     }
 }
 
 - (IBAction)NextLevelButtonn:(UIButton *)sender {
-    if (sender.selected) {
+    if ([sender isSelected]) {
         [self NextLevell];
     }
     
