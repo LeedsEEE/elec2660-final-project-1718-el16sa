@@ -86,6 +86,15 @@
 		E526D7AC1FD9F3040042467F /* a.png in Resources */ = {isa = PBXBuildFile; fileRef = E526D7921FD9F3030042467F /* a.png */; };
 		E526D7AE1FD9F34C0042467F /* Game_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E526D7AD1FD9F34C0042467F /* Game_background.jpg */; };
 		E526D7B01FD9F4880042467F /* box.png in Resources */ = {isa = PBXBuildFile; fileRef = E526D7AF1FD9F4880042467F /* box.png */; };
+		E57519FA1FDA5698008C2606 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = E57519F91FDA5698008C2606 /* play.png */; };
+		E57519FC1FDA56E4008C2606 /* newgame.png in Resources */ = {isa = PBXBuildFile; fileRef = E57519FB1FDA56E4008C2606 /* newgame.png */; };
+		E5751A011FDA624E008C2606 /* in.png in Resources */ = {isa = PBXBuildFile; fileRef = E57519FD1FDA624E008C2606 /* in.png */; };
+		E5751A021FDA624E008C2606 /* me.png in Resources */ = {isa = PBXBuildFile; fileRef = E57519FE1FDA624E008C2606 /* me.png */; };
+		E5751A031FDA624E008C2606 /* el.png in Resources */ = {isa = PBXBuildFile; fileRef = E57519FF1FDA624E008C2606 /* el.png */; };
+		E5751A041FDA624E008C2606 /* Dif.png in Resources */ = {isa = PBXBuildFile; fileRef = E5751A001FDA624E008C2606 /* Dif.png */; };
+		E5751A071FDA64E1008C2606 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5751A061FDA64E1008C2606 /* AudioToolbox.framework */; };
+		E5751A091FDA65CD008C2606 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5751A081FDA65CD008C2606 /* AVFoundation.framework */; };
+		E5751A0B1FDA67BC008C2606 /* correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = E5751A0A1FDA67BC008C2606 /* correct.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -200,6 +209,15 @@
 		E526D7921FD9F3030042467F /* a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = a.png; path = "Word Games/a.png"; sourceTree = "<group>"; };
 		E526D7AD1FD9F34C0042467F /* Game_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Game_background.jpg; sourceTree = "<group>"; };
 		E526D7AF1FD9F4880042467F /* box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = box.png; sourceTree = "<group>"; };
+		E57519F91FDA5698008C2606 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		E57519FB1FDA56E4008C2606 /* newgame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newgame.png; sourceTree = "<group>"; };
+		E57519FD1FDA624E008C2606 /* in.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = in.png; sourceTree = "<group>"; };
+		E57519FE1FDA624E008C2606 /* me.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = me.png; sourceTree = "<group>"; };
+		E57519FF1FDA624E008C2606 /* el.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = el.png; sourceTree = "<group>"; };
+		E5751A001FDA624E008C2606 /* Dif.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dif.png; sourceTree = "<group>"; };
+		E5751A061FDA64E1008C2606 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E5751A081FDA65CD008C2606 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E5751A0A1FDA67BC008C2606 /* correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = correct.wav; path = ../../../Downloads/files/correct.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +225,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5751A091FDA65CD008C2606 /* AVFoundation.framework in Frameworks */,
+				E5751A071FDA64E1008C2606 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +316,7 @@
 				E526D7751FD9E7DC0042467F /* a_rednew.png */,
 				E526D7761FD9E7DC0042467F /* a_emptynew.png */,
 				E526D7731FD9E7AA0042467F /* background.jpg */,
+				E5751A051FDA64E1008C2606 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -331,8 +352,15 @@
 				E526D74C1FD3475F0042467F /* ISecondViewController.h */,
 				E526D74D1FD3475F0042467F /* ISecondViewController.m */,
 				E526D6EC1FC780950042467F /* Main.storyboard */,
+				E57519FD1FDA624E008C2606 /* in.png */,
+				E57519FE1FDA624E008C2606 /* me.png */,
+				E57519FF1FDA624E008C2606 /* el.png */,
+				E5751A001FDA624E008C2606 /* Dif.png */,
+				E57519FB1FDA56E4008C2606 /* newgame.png */,
+				E57519F91FDA5698008C2606 /* play.png */,
 				E526D7AF1FD9F4880042467F /* box.png */,
 				E526D7AD1FD9F34C0042467F /* Game_background.jpg */,
+				E5751A0A1FDA67BC008C2606 /* correct.wav */,
 				E526D6EF1FC780950042467F /* Assets.xcassets */,
 				E526D6F11FC780960042467F /* LaunchScreen.storyboard */,
 				E526D6F41FC780960042467F /* Info.plist */,
@@ -365,6 +393,15 @@
 				E526D70A1FC780960042467F /* Info.plist */,
 			);
 			path = "Word GamesUITests";
+			sourceTree = "<group>";
+		};
+		E5751A051FDA64E1008C2606 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5751A081FDA65CD008C2606 /* AVFoundation.framework */,
+				E5751A061FDA64E1008C2606 /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -475,6 +512,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E526D7A51FD9F3040042467F /* f-red.png in Resources */,
+				E57519FA1FDA5698008C2606 /* play.png in Resources */,
 				E526D7A71FD9F3040042467F /* e-red.png in Resources */,
 				E526D7A41FD9F3040042467F /* i.png in Resources */,
 				E526D7A81FD9F3040042467F /* e.png in Resources */,
@@ -491,6 +529,7 @@
 				E526D7331FC788440042467F /* f_empty.png in Resources */,
 				E526D79B1FD9F3030042467F /* q.png in Resources */,
 				E526D7A21FD9F3040042467F /* l.png in Resources */,
+				E5751A031FDA624E008C2606 /* el.png in Resources */,
 				E526D6F31FC780960042467F /* LaunchScreen.storyboard in Resources */,
 				E526D7A31FD9F3040042467F /* i-red.png in Resources */,
 				E526D76C1FD5C6290042467F /* s_empty.png in Resources */,
@@ -513,6 +552,7 @@
 				E526D7A91FD9F3040042467F /* d-red.png in Resources */,
 				E526D72A1FC788440042467F /* o_red.png in Resources */,
 				E526D76B1FD5C6290042467F /* l_empty.png in Resources */,
+				E5751A021FDA624E008C2606 /* me.png in Resources */,
 				E526D7AC1FD9F3040042467F /* a.png in Resources */,
 				E526D72F1FC788440042467F /* e_empty.png in Resources */,
 				E526D7661FD5C6280042467F /* q_red.png in Resources */,
@@ -532,15 +572,19 @@
 				E526D7351FC788440042467F /* r_empty.png in Resources */,
 				E526D7771FD9E7DC0042467F /* a_rednew.png in Resources */,
 				E526D7AA1FD9F3040042467F /* d.png in Resources */,
+				E5751A041FDA624E008C2606 /* Dif.png in Resources */,
 				E526D7AE1FD9F34C0042467F /* Game_background.jpg in Resources */,
+				E5751A011FDA624E008C2606 /* in.png in Resources */,
 				E526D7961FD9F3030042467F /* t.png in Resources */,
 				E526D7611FD5C6280042467F /* w_red.png in Resources */,
 				E526D7601FD5C6280042467F /* n_red.png in Resources */,
 				E526D7991FD9F3030042467F /* r-red.png in Resources */,
 				E526D7A11FD9F3040042467F /* L-red.png in Resources */,
+				E5751A0B1FDA67BC008C2606 /* correct.wav in Resources */,
 				E526D7691FD5C6280042467F /* n_empty.png in Resources */,
 				E526D72B1FC788440042467F /* o_empty.png in Resources */,
 				E526D7931FD9F3030042467F /* w.png in Resources */,
+				E57519FC1FDA56E4008C2606 /* newgame.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -818,6 +862,7 @@
 				E526D70F1FC780960042467F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E526D7101FC780960042467F /* Build configuration list for PBXNativeTarget "Word GamesTests" */ = {
 			isa = XCConfigurationList;
@@ -826,6 +871,7 @@
 				E526D7121FC780960042467F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E526D7131FC780960042467F /* Build configuration list for PBXNativeTarget "Word GamesUITests" */ = {
 			isa = XCConfigurationList;
@@ -834,6 +880,7 @@
 				E526D7151FC780960042467F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

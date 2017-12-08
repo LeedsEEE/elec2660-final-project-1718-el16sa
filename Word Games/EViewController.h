@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AudioToolbox/AudioToolbox.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface EViewController : UIViewController
 
@@ -45,6 +47,17 @@
 @property (weak, nonatomic) IBOutlet UIImageView *E3;
 @property (weak, nonatomic) IBOutlet UIImageView *W2;
 @property (weak, nonatomic) IBOutlet UIImageView *A4;
+@property (weak, nonatomic) IBOutlet UILabel *livesLabel;
+@property NSString* Livess;
+
+@property (weak, nonatomic) IBOutlet UIButton *inputDWrong;
+@property (weak, nonatomic) IBOutlet UIButton *inputSWrong;
+@property (weak, nonatomic) IBOutlet UIButton *inputOWrong;
+@property (weak, nonatomic) IBOutlet UIButton *InputMWrong;
+- (IBAction)inputSWrongg:(UIButton *)sender;
+- (IBAction)inputOWrong:(UIButton *)sender;
+- (IBAction)inputMWrong:(UIButton *)sender;
+- (IBAction)inputDwrong:(UIButton *)sender;
 
 
 

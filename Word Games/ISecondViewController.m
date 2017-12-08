@@ -7,10 +7,12 @@
 //
 
 #import "ISecondViewController.h"
+@import MediaPlayer;
 
 @interface ISecondViewController ()
 
 @end
+AVAudioPlayer *correct5;
 
 @implementation ISecondViewController
 
@@ -40,6 +42,8 @@
     self.O3.hidden = true;
     self.I5.hidden = true;
     self.R2.hidden = true;
+    NSURL *CorrectSound = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/correct.wav",[[NSBundle mainBundle] resourcePath]]];
+    correct5 = [[AVAudioPlayer alloc] initWithContentsOfURL:CorrectSound error:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -173,6 +177,7 @@
         self.I1.hidden = false;
         self.M1.hidden = false;
         self.S1.hidden = false;
+        [correct5 play];
         [_inputT setImage:[UIImage imageNamed:@"t.png"] forState:UIControlStateNormal];
         [_inputT setSelected:NO];
         [_inputR setImage:[UIImage imageNamed:@"r.png"] forState:UIControlStateNormal];
@@ -196,6 +201,7 @@
         self.I3.hidden = false;
         self.S3.hidden = false;
         self.T3.hidden = false;
+        [correct5 play];
         [_inputM setImage:[UIImage imageNamed:@"m.png"] forState:UIControlStateNormal];
         [_inputM setSelected:NO];
         [_inputO setImage:[UIImage imageNamed:@"o.png"] forState:UIControlStateNormal];
@@ -214,6 +220,7 @@
 
 -(void)checkForSequence3{
     if (_inputO.selected && _inputM.selected && _inputI.selected && _inputT.selected && _inputS.selected) {
+        [correct5 play];
         [_inputO setImage:[UIImage imageNamed:@"o.png"] forState:UIControlStateNormal];
         [_inputO setSelected:NO];
         [_inputM setImage:[UIImage imageNamed:@"m.png"] forState:UIControlStateNormal];
@@ -232,6 +239,7 @@
 }
 -(void)checkForSequence4{
     if (_inputR.selected && _inputI.selected && _inputO.selected && _inputT.selected) {
+        [correct5 play];
         self.R2.hidden = false;
         self.I5.hidden = false;
         self.O3.hidden = false;
@@ -248,6 +256,7 @@
 }
 -(void)checkForSequence5{
     if (_inputS.selected && _inputM.selected && _inputI.selected && _inputT.selected) {
+        [correct5 play];
         self.S4.hidden = false;
         self.M4.hidden = false;
         self.I4.hidden = false;

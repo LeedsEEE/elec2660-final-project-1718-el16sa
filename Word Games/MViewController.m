@@ -8,9 +8,12 @@
 
 #import "MViewController.h"
 #import "MSecondViewController.h"
+@import MediaPlayer;
 @interface MViewController ()
 
 @end
+AVAudioPlayer *correct2;
+
 
 @implementation MViewController
 
@@ -38,6 +41,8 @@
     self.D3.hidden = true;
     self.E3.hidden = true;
     self.NextLevelButton.hidden = true;
+    NSURL *CorrectSound = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/correct.wav",[[NSBundle mainBundle] resourcePath]]];
+    correct2 = [[AVAudioPlayer alloc] initWithContentsOfURL:CorrectSound error:nil];
 }
 
 
@@ -195,6 +200,7 @@
         self.O1.hidden = false;
         self.R1.hidden = false;
         self.D1.hidden = false;
+        [correct2 play];
         [_input6 setImage:[UIImage imageNamed:@"f.png"] forState:UIControlStateNormal];
         [_input6 setSelected:NO];
         [_input3 setImage:[UIImage imageNamed:@"o.png"] forState:UIControlStateNormal];
@@ -217,6 +223,7 @@
         self.A1.hidden = false;
         self.R2.hidden = false;
         self.E1.hidden = false;
+        [correct2 play];
         [_input1 setImage:[UIImage imageNamed:@"r.png"] forState:UIControlStateNormal];
         [_input1 setSelected:NO];
         [_input4 setImage:[UIImage imageNamed:@"a.png"] forState:UIControlStateNormal];
@@ -236,6 +243,7 @@
         self.E2.hidden = false;
         self.A2.hidden = false;
         self.F3.hidden = false;
+        [correct2 play];
         [_input5 setImage:[UIImage imageNamed:@"d.png"] forState:UIControlStateNormal];
         [_input5 setSelected:NO];
         [_input2 setImage:[UIImage imageNamed:@"e.png"] forState:UIControlStateNormal];
@@ -254,6 +262,7 @@
         self.F4.hidden = false;
         self.R3.hidden = false;
         self.O2.hidden = false;
+        [correct2 play];
         [_input4 setImage:[UIImage imageNamed:@"a.png"] forState:UIControlStateNormal];
         [_input4 setSelected:NO];
         [_input6 setImage:[UIImage imageNamed:@"f.png"] forState:UIControlStateNormal];
@@ -272,6 +281,7 @@
         self.O3.hidden = false;
         self.D3.hidden = false;
         self.E3.hidden = false;
+        [correct2 play];
         [_input1 setImage:[UIImage imageNamed:@"r.png"] forState:UIControlStateNormal];
         [_input1 setSelected:NO];
         [_input3 setImage:[UIImage imageNamed:@"o.png"] forState:UIControlStateNormal];
@@ -296,7 +306,7 @@
 
 -(void)checkForSequence6{
     if (_input5.selected && _input2.selected && _input4.selected && _input1.selected) {
-
+[correct2 play];
 
         [_input5 setImage:[UIImage imageNamed:@"d.png"] forState:UIControlStateNormal];
         [_input5 setSelected:NO];
@@ -315,7 +325,7 @@
 -(void)checkForSequence7{
     if (_input1.selected && _input2.selected && _input4.selected && _input5.selected) {
         
-        
+        [correct2 play];
         [_input1 setImage:[UIImage imageNamed:@"r.png"] forState:UIControlStateNormal];
         [_input1 setSelected:NO];
         [_input2 setImage:[UIImage imageNamed:@"e.png"] forState:UIControlStateNormal];
@@ -333,7 +343,7 @@
 -(void)checkForSequence8{
     if (_input5.selected && _input4.selected && _input1.selected && _input2.selected) {
         
-        
+        [correct2 play];
         [_input5 setImage:[UIImage imageNamed:@"d.png"] forState:UIControlStateNormal];
         [_input5 setSelected:NO];
         [_input4 setImage:[UIImage imageNamed:@"a.png"] forState:UIControlStateNormal];
@@ -351,7 +361,7 @@
 -(void)checkForSequence9{
     if (_input6.selected && _input2.selected && _input4.selected && _input1.selected) {
         
-        
+        [correct2 play];
         [_input6 setImage:[UIImage imageNamed:@"f.png"] forState:UIControlStateNormal];
         [_input6 setSelected:NO];
         [_input2 setImage:[UIImage imageNamed:@"e.png"] forState:UIControlStateNormal];
@@ -369,7 +379,7 @@
 -(void)checkForSequence10{
     if (_input1.selected && _input3.selected && _input4.selected && _input5.selected) {
         
-        
+        [correct2 play];
         [_input1 setImage:[UIImage imageNamed:@"r.png"] forState:UIControlStateNormal];
         [_input1 setSelected:NO];
         [_input3 setImage:[UIImage imageNamed:@"o.png"] forState:UIControlStateNormal];

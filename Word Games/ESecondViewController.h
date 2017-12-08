@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AudioToolbox/AudioToolbox.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface ESecondViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *output1;
@@ -36,7 +38,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *R1;
 @property (weak, nonatomic) IBOutlet UIImageView *E1;
 @property (weak, nonatomic) IBOutlet UIImageView *E2;
-
+@property (weak, nonatomic) IBOutlet UILabel *livesLabel;
+@property NSString* Livess;
 
 
 

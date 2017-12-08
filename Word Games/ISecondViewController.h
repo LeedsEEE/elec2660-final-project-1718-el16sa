@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AudioToolbox/AudioToolbox.h"
+#import <AVFoundation/AVFoundation.h>
+
 
 @interface ISecondViewController : UIViewController
 @property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *Outputs;

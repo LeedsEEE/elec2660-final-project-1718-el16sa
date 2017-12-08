@@ -7,10 +7,13 @@
 //
 
 #import "ESecondViewController.h"
+@import MediaPlayer;
 
 @interface ESecondViewController ()
 
 @end
+AVAudioPlayer *correct1;
+int lives;
 
 @implementation ESecondViewController
 
@@ -32,6 +35,11 @@
     self.R1.hidden = true;
     self.E1.hidden = true;
     self.E2.hidden = true;
+    NSURL *CorrectSound = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/correct.wav",[[NSBundle mainBundle] resourcePath]]];
+    correct1 = [[AVAudioPlayer alloc] initWithContentsOfURL:CorrectSound error:nil];
+    lives = 5;
+    _Livess = [NSString stringWithFormat:@"Lives: 5"];
+    _livesLabel.text = _Livess;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -198,6 +206,7 @@
         self.O1.hidden = false;
         self.W1.hidden = false;
         self.L1.hidden = false;
+        [correct1 play];
         [_inputO setImage:[UIImage imageNamed:@"o.png"] forState:UIControlStateNormal];
         [_inputO setSelected:NO];
         [_inputW setImage:[UIImage imageNamed:@"w.png"] forState:UIControlStateNormal];
@@ -214,6 +223,7 @@
         self.L2.hidden = false;
         self.O2.hidden = false;
         self.T1.hidden = false;
+        [correct1 play];
         [_inputL setImage:[UIImage imageNamed:@"l.png"] forState:UIControlStateNormal];
         [_inputL setSelected:NO];
         [_inputO setImage:[UIImage imageNamed:@"o.png"] forState:UIControlStateNormal];
@@ -230,6 +240,7 @@
         self.T2.hidden = false;
         self.O3.hidden = false;
         self.W2.hidden = false;
+        [correct1 play];
         [_inputT setImage:[UIImage imageNamed:@"t.png"] forState:UIControlStateNormal];
         [_inputT setSelected:NO];
         [_inputO setImage:[UIImage imageNamed:@"o.png"] forState:UIControlStateNormal];
@@ -246,6 +257,7 @@
         self.W3.hidden = false;
         self.O4.hidden = false;
         self.E1.hidden = false;
+        [correct1 play];
         [_inputW setImage:[UIImage imageNamed:@"w.png"] forState:UIControlStateNormal];
         [_inputW setSelected:NO];
         [_inputO setImage:[UIImage imageNamed:@"o.png"] forState:UIControlStateNormal];
@@ -262,6 +274,7 @@
         self.O5.hidden = false;
         self.R1.hidden = false;
         self.E2.hidden = false;
+        [correct1 play];
         [_inputO setImage:[UIImage imageNamed:@"o.png"] forState:UIControlStateNormal];
         [_inputO setSelected:NO];
         [_inputR setImage:[UIImage imageNamed:@"r.png"] forState:UIControlStateNormal];
@@ -275,6 +288,7 @@
 -(void)checkForSequence6{
     if (_inputL.selected && _inputE.selected && _inputT.selected) {
         NSLog(@"pressed");
+        [correct1 play];
         [_inputL setImage:[UIImage imageNamed:@"l.png"] forState:UIControlStateNormal];
         [_inputL setSelected:NO];
         [_inputE setImage:[UIImage imageNamed:@"e.png"] forState:UIControlStateNormal];
@@ -288,6 +302,7 @@
 -(void)checkForSequence7{
     if (_inputR.selected && _inputO.selected && _inputT.selected) {
         NSLog(@"pressed");
+        [correct1 play];
         [_inputR setImage:[UIImage imageNamed:@"r.png"] forState:UIControlStateNormal];
         [_inputR setSelected:NO];
         [_inputO setImage:[UIImage imageNamed:@"o.png"] forState:UIControlStateNormal];
@@ -301,6 +316,7 @@
 -(void)checkForSequence8{
     if (_inputR.selected && _inputO.selected && _inputW.selected) {
         NSLog(@"pressed");
+        [correct1 play];
         [_inputR setImage:[UIImage imageNamed:@"r.png"] forState:UIControlStateNormal];
         [_inputR setSelected:NO];
         [_inputO setImage:[UIImage imageNamed:@"o.png"] forState:UIControlStateNormal];
@@ -314,6 +330,7 @@
 -(void)checkForSequence9{
     if (_inputT.selected && _inputO.selected && _inputE.selected) {
         NSLog(@"pressed");
+        [correct1 play];
         [_inputT setImage:[UIImage imageNamed:@"t.png"] forState:UIControlStateNormal];
         [_inputT setSelected:NO];
         [_inputO setImage:[UIImage imageNamed:@"o.png"] forState:UIControlStateNormal];
@@ -327,6 +344,7 @@
 -(void)checkForSequence10{
     if (_inputW.selected && _inputE.selected && _inputT.selected) {
         NSLog(@"pressed");
+        [correct1 play];
         [_inputW setImage:[UIImage imageNamed:@"w.png"] forState:UIControlStateNormal];
         [_inputW setSelected:NO];
         [_inputE setImage:[UIImage imageNamed:@"e.png"] forState:UIControlStateNormal];

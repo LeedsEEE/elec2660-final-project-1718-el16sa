@@ -8,10 +8,12 @@
 
 #import "IViewController.h"
 #import "ISecondViewController.h"
+@import MediaPlayer;
 
 @interface IViewController ()
 
 @end
+AVAudioPlayer *correct4;
 
 @implementation IViewController
 
@@ -46,6 +48,9 @@
     self.R4.hidden = true;
     self.NextLevellButton.hidden = true;
     self.L4.hidden = true;
+    NSURL *CorrectSound = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/correct.wav",[[NSBundle mainBundle] resourcePath]]];
+    correct4 = [[AVAudioPlayer alloc] initWithContentsOfURL:CorrectSound error:nil];
+
     
 }
 
@@ -191,6 +196,7 @@
         self.S1.hidden = false;
         self.L1.hidden = false;
         self.A1.hidden = false;
+        [correct4 play];
         [_inputT setImage:[UIImage imageNamed:@"t.png"] forState:UIControlStateNormal];
         [_inputT setSelected:NO];
         [_inputE setImage:[UIImage imageNamed:@"e.png"] forState:UIControlStateNormal];
@@ -225,6 +231,7 @@
         self.R5.hidden = false;
         self.L4.hidden = false;
         self.E4.hidden = false;
+        [correct4 play];
         [_inputL setImage:[UIImage imageNamed:@"l.png"] forState:UIControlStateNormal];
         [_inputL setSelected:NO];
         [_inputA setImage:[UIImage imageNamed:@"a.png"] forState:UIControlStateNormal];
@@ -261,6 +268,7 @@
         self.R3.hidden = false;
         self.T2.hidden = false;
         self.E3.hidden = false;
+        [correct4 play];
         [_inputL setImage:[UIImage imageNamed:@"l.png"] forState:UIControlStateNormal];
         [_inputL setSelected:NO];
         [_inputA setImage:[UIImage imageNamed:@"a.png"] forState:UIControlStateNormal];
@@ -292,14 +300,14 @@
 -(void)checkForSequence4{
     if (_inputR.selected && _inputA.selected && _inputT.selected && _inputE.selected && _inputS.selected) {
        
-        
+       
         self.Tn.hidden = false;
         self.E5.hidden = false;
         self.S3.hidden = false;
         self.A3.hidden = false;
         self.R4.hidden = false;
         
-        
+         [correct4 play];
         [_inputS setImage:[UIImage imageNamed:@"s.png"] forState:UIControlStateNormal];
         [_inputS setSelected:NO];
         [_inputT setImage:[UIImage imageNamed:@"t.png"] forState:UIControlStateNormal];
@@ -330,48 +338,6 @@
     
 }
 
-/*-(void)checkForSequence6{
-    if (_inputS.selected && _inputT.selected && _inputA.selected && _inputR.selected && _inputE.selected) {
-       
-        [_inputR setImage:[UIImage imageNamed:@"r.png"] forState:UIControlStateNormal];
-        [_inputR setSelected:NO];
-        [_inputE setImage:[UIImage imageNamed:@"e.png"] forState:UIControlStateNormal];
-        [_inputE setSelected:NO];
-        [_inputA setImage:[UIImage imageNamed:@"a.png"] forState:UIControlStateNormal];
-        [_inputA setSelected:NO];
-        [_inputS setImage:[UIImage imageNamed:@"s.png"] forState:UIControlStateNormal];
-        [_inputS setSelected:NO];
-        [_inputT setImage:[UIImage imageNamed:@"t.png"] forState:UIControlStateNormal];
-        [_inputT setSelected:NO];
-        
-        
-    }
-   
-    
-    
-}
--(void)checkForSequence7{
-    if (_inputL.selected && _inputA.selected && _inputT.selected && _inputE.selected && _inputR.selected) {
-        
-        [_inputL setImage:[UIImage imageNamed:@"l.png"] forState:UIControlStateNormal];
-        [_inputL setSelected:NO];
-        [_inputA setImage:[UIImage imageNamed:@"a.png"] forState:UIControlStateNormal];
-        [_inputA setSelected:NO];
-        [_inputT setImage:[UIImage imageNamed:@"t.png"] forState:UIControlStateNormal];
-        [_inputT setSelected:NO];
-        [_inputE setImage:[UIImage imageNamed:@"e.png"] forState:UIControlStateNormal];
-        [_inputE setSelected:NO];
-        [_inputR setImage:[UIImage imageNamed:@"r.png"] forState:UIControlStateNormal];
-        [_inputR setSelected:NO];
-        
-        
-    }
-    
-   
-    
-    
-}
-*/
 
 - (IBAction)NextLevelButtonnn:(UIButton *)sender {
     if ([sender isSelected]) {

@@ -8,10 +8,12 @@
 
 #import "MSecondViewController.h"
 #import "MViewController.h"
+@import MediaPlayer;
 
 @interface MSecondViewController ()
 
 @end
+AVAudioPlayer *correct3;
 
 @implementation MSecondViewController
 
@@ -38,6 +40,8 @@
     self.S4Second.hidden = true;
     self.S5Second.hidden = true;
     self.T3Second.hidden = true;
+    NSURL *CorrectSound = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/correct.wav",[[NSBundle mainBundle] resourcePath]]];
+    correct3 = [[AVAudioPlayer alloc] initWithContentsOfURL:CorrectSound error:nil];
     
     
 }
@@ -241,6 +245,7 @@
         self.O1Second.hidden = false;
         self.S1Second.hidden = false;
         self.T1Second.hidden = false;
+        [correct3 play];
         [_inputL setImage:[UIImage imageNamed:@"l.png"] forState:UIControlStateNormal];
         [_inputL setSelected:NO];
         [_inputO setImage:[UIImage imageNamed:@"o.png"] forState:UIControlStateNormal];
@@ -258,6 +263,7 @@
         self.O2Second.hidden = false;
         self.R1Second.hidden = false;
         self.E1Second.hidden = false;
+        [correct3 play];
         [_inputS setImage:[UIImage imageNamed:@"s.png"] forState:UIControlStateNormal];
         [_inputS setSelected:NO];
         [_inputO setImage:[UIImage imageNamed:@"o.png"] forState:UIControlStateNormal];
@@ -275,6 +281,7 @@
         self.E2Second.hidden = false;
         self.S3Second.hidden = false;
         self.T2Second.hidden = false;
+        [correct3 play];
         [_inputR setImage:[UIImage imageNamed:@"r.png"] forState:UIControlStateNormal];
         [_inputR setSelected:NO];
         [_inputE setImage:[UIImage imageNamed:@"e.png"] forState:UIControlStateNormal];
@@ -291,6 +298,7 @@
         self.O3Second.hidden = false;
         self.L2Second.hidden = false;
         self.E3Second.hidden = false;
+        [correct3 play];
         [_inputS setImage:[UIImage imageNamed:@"s.png"] forState:UIControlStateNormal];
         [_inputS setSelected:NO];
         [_inputO setImage:[UIImage imageNamed:@"o.png"] forState:UIControlStateNormal];
@@ -307,6 +315,7 @@
         self.E4Second.hidden = false;
         self.S5Second.hidden = false;
         self.T3Second.hidden = false;
+        [correct3 play];
         [_inputR setImage:[UIImage imageNamed:@"l.png"] forState:UIControlStateNormal];
         [_inputR setSelected:NO];
         [_inputE setImage:[UIImage imageNamed:@"e.png"] forState:UIControlStateNormal];
@@ -319,6 +328,7 @@
 }
 -(void)checkForSequence7{
     if (_inputL.selected && _inputE.selected && _inputT.selected && _inputS.selected) {
+        [correct3 play];
         [_inputL setImage:[UIImage imageNamed:@"l.png"] forState:UIControlStateNormal];
         [_inputL setSelected:NO];
         [_inputE setImage:[UIImage imageNamed:@"e.png"] forState:UIControlStateNormal];
@@ -331,6 +341,7 @@
 }
 -(void)checkForSequence8{
     if (_inputL.selected && _inputO.selected && _inputR.selected && _inputE.selected) {
+        [correct3 play];
         [_inputL setImage:[UIImage imageNamed:@"l.png"] forState:UIControlStateNormal];
         [_inputL setSelected:NO];
         [_inputO setImage:[UIImage imageNamed:@"o.png"] forState:UIControlStateNormal];
@@ -343,6 +354,7 @@
 }
 -(void)checkForSequence9{
     if (_inputL.selected && _inputO.selected && _inputS.selected && _inputE.selected) {
+        [correct3 play];
         [_inputL setImage:[UIImage imageNamed:@"l.png"] forState:UIControlStateNormal];
         [_inputL setSelected:NO];
         [_inputO setImage:[UIImage imageNamed:@"o.png"] forState:UIControlStateNormal];
@@ -355,6 +367,7 @@
 }
 -(void)checkForSequence10{
     if (_inputR.selected && _inputO.selected && _inputL.selected && _inputE.selected) {
+        [correct3 play];
         [_inputR setImage:[UIImage imageNamed:@"r.png"] forState:UIControlStateNormal];
         [_inputR setSelected:NO];
         [_inputO setImage:[UIImage imageNamed:@"o.png"] forState:UIControlStateNormal];
@@ -367,6 +380,7 @@
 }
 -(void)checkForSequence11{
     if (_inputR.selected && _inputO.selected && _inputS.selected && _inputE.selected) {
+        [correct3 play];
         [_inputR setImage:[UIImage imageNamed:@"r.png"] forState:UIControlStateNormal];
         [_inputR setSelected:NO];
         [_inputO setImage:[UIImage imageNamed:@"o.png"] forState:UIControlStateNormal];
@@ -379,6 +393,7 @@
 }
 -(void)checkForSequence12{
     if (_inputS.selected && _inputL.selected && _inputO.selected && _inputT.selected) {
+        [correct3 play];
         [_inputS setImage:[UIImage imageNamed:@"s.png"] forState:UIControlStateNormal];
         [_inputS setSelected:NO];
         [_inputL setImage:[UIImage imageNamed:@"l.png"] forState:UIControlStateNormal];
@@ -391,6 +406,7 @@
 }
 -(void)checkForSequence13{
     if (_inputS.selected && _inputO.selected && _inputR.selected && _inputT.selected) {
+        [correct3 play];
         [_inputS setImage:[UIImage imageNamed:@"s.png"] forState:UIControlStateNormal];
         [_inputS setSelected:NO];
         [_inputO setImage:[UIImage imageNamed:@"o.png"] forState:UIControlStateNormal];
@@ -403,6 +419,7 @@
 }
 -(void)checkForSequence14{
     if (_inputT.selected && _inputO.selected && _inputE.selected && _inputS.selected) {
+        [correct3 play];
         [_inputT setImage:[UIImage imageNamed:@"t.png"] forState:UIControlStateNormal];
         [_inputT setSelected:NO];
         [_inputO setImage:[UIImage imageNamed:@"o.png"] forState:UIControlStateNormal];
